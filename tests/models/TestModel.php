@@ -1,6 +1,6 @@
 <?php
 
-use Elasticquent\ElasticquentInterface;
+use Elasticquent\Contracts\ElasticquentInterface;
 use Elasticquent\ElasticquentTrait;
 use Illuminate\Database\Eloquent\Model as Eloquent;
 

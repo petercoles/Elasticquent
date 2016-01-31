@@ -1,4 +1,6 @@
-<?php namespace Elasticquent;
+<?php
+
+namespace Elasticquent\Contracts;
 
 interface ElasticquentInterface
 {

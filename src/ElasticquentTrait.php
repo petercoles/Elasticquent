@@ -518,53 +518,6 @@ trait ElasticquentTrait
     }
 
     /**
-     * Create Index
-     *
-     * @param int $shards
-     * @param int $replicas
-     *
-     * @return array
-     */
-    public static function createIndex($shards = null, $replicas = null)
-    {
-        $instance = new static;
-
-        $client = $instance->getElasticSearchClient();
-
-        $index = array(
-            'index' => $instance->getIndexName(),
-        );
-
-        if (!is_null($shards)) {
-            $index['body']['settings']['number_of_shards'] = $shards;
-        }
-
-        if (!is_null($replicas)) {
-            $index['body']['settings']['number_of_replicas'] = $replicas;
-        }
-
-        return $client->indices()->create($index);
-    }
-
-    /**
-     * Delete Index
-     *
-     * @return array
-     */
-    public static function deleteIndex()
-    {
-        $instance = new static;
-
-        $client = $instance->getElasticSearchClient();
-
-        $index = array(
-            'index' => $instance->getIndexName(),
-        );
-
-        return $client->indices()->delete($index);
-    }
-
-    /**
      * Type Exists.
      *
      * Does this type exist?

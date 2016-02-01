@@ -2,7 +2,7 @@
 
 namespace Elasticquent\Contracts;
 
-interface ElasticquentInterface
+interface ElasticquentModelInterface
 {
     /**
      * Get ElasticSearch Client
@@ -128,49 +128,4 @@ interface ElasticquentInterface
      * @return null|float
      */
     public function documentScore();
-
-    /**
-     * Put Mapping.
-     *
-     * @param bool $ignoreConflicts
-     *
-     * @return
-     */
-    public static function putMapping($ignoreConflicts = false);
-
-    /**
-     * Delete Mapping
-     *
-     * @return
-     */
-    public static function deleteMapping();
-
-    /**
-     * Rebuild Mapping
-     *
-     * This will delete and then re-add
-     * the mapping for this model.
-     *
-     * @return
-     */
-    public static function rebuildMapping();
-
-    /**
-     * Get Mapping
-     *
-     * Get our existing Elasticsearch mapping
-     * for this model.
-     *
-     * @return
-     */
-    public static function getMapping();
-
-    /**
-     * Type Exists
-     *
-     * Does this type exist?
-     *
-     * @return bool
-     */
-    public static function typeExists();
 }

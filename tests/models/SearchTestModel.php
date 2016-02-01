@@ -1,11 +1,11 @@
 <?php
 
-use Elasticquent\Contracts\ElasticquentInterface;
+use Elasticquent\Contracts\ElasticquentModelInterface;
 use Elasticquent\ElasticquentTrait;
 use Illuminate\Database\Eloquent\Model as Eloquent;
 use Mockery as m;
 
-class SearchTestModel extends Eloquent implements ElasticquentInterface
+class SearchTestModel extends Eloquent implements ElasticquentModelInterface
 {
     use ElasticquentTrait;
 
